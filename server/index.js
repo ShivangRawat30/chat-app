@@ -12,7 +12,6 @@ import authRoutes from "./routes/auth.js";
 dotenv.config();
 const app = express();
 app.use(express.json());
-
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
@@ -32,7 +31,7 @@ app.use("/openai", openAiRoutes);
 app.use("/auth", authRoutes);
 
 /* SERVER SETUP */
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
 });

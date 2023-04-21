@@ -28,7 +28,7 @@ export const api = createApi({
     }),
     postLogin: build.mutation({
       query: (payload) => ({
-        url: "auth/login",
+        url: "/auth/login",
         method: "POST",
         body: payload,
       }),
